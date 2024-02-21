@@ -69,7 +69,7 @@ const Register = () => {
             .then((res) => {
                 if (res.status === 200) {
                     Toast.show({
-                        topOffset: 60,
+                        topOffset: 60, 
                         type: "success",
                         text1: "Registration Succeeded",
                         text2: "Please Login into your account",
@@ -95,6 +95,7 @@ const Register = () => {
         setLaunchCam(true)
         if (camera) {
             const data = await camera.takePictureAsync(null)
+            console.log(data)
             setImage(data.uri);
             setMainImage(data.uri)
             setLaunchCam(false)
@@ -111,7 +112,7 @@ const Register = () => {
                 aspect: [4, 3],
                 quality: 0.1,
             });
-            // console.log(result)
+            console.log(result)
            
             // setImage(data.uri);
             // setMainImage(data.uri)
@@ -154,7 +155,7 @@ const Register = () => {
                         </View>
                         <Button
                             variant={"ghost"}
-                            onPress={() => addPhoto()}><Text> add photo</Text>
+                            onPress={() => takePicture()}><Text> add photo</Text>
                         </Button>
                         <Button
                             variant={"ghost"}
