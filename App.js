@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler'
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import store from "./Redux/store";
 import Toast from "react-native-toast-message"
 import Auth from './Context/Store/Auth';
+import DrawerNavigator from './Navigators/DrawerNavigator';
 const theme = extendTheme({ colors: newColorTheme });
 const newColorTheme = {
   brand: {
@@ -27,7 +28,8 @@ export default function App() {
         <NativeBaseProvider theme={theme}>
           <NavigationContainer>
             <Header />
-            <Main />
+            <DrawerNavigator />
+            {/* <Main /> */}
             <Toast />
           </NavigationContainer>
         </NativeBaseProvider>
