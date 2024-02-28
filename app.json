@@ -31,6 +31,13 @@
       "eas": {
         "projectId": "a097795e-92a0-4c6d-a21e-c36e40979624"
       }
-    }
+    },
+    "plugins": [
+      ["expo-build-properties", {
+        "android": {
+          "usesCleartextTraffic": true
+        }
+      }]
+    ]
   }
 }
